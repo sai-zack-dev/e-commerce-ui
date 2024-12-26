@@ -5,9 +5,10 @@ import ProductCard from './ProductCard';
 
 export default function ProductsList() {
   return (
-    <FlatList className="w-full"
+    <FlatList
         data={products} keyExtractor={(product) => product.id}
         renderItem={({ item }) => <ProductCard {...item} /> }
+        contentContainerStyle={{ paddingHorizontal: 15 }}
     />
   );
 }
